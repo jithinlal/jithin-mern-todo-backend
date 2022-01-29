@@ -1,0 +1,46 @@
+{
+	"name": "backend-todo",
+	"version": "1.0.0",
+	"description": "A backend todo for any frontend backend needs",
+	"main": "index.js",
+	"scripts": {
+		"watch": "tsc -w",
+		"dev": "nodemon dist/index.js",
+		"start": "node dist/index.js",
+		"build": "tsc",
+		"postinstall": "tsc",
+		"entity:create": "./node_modules/.bin/ts-node ./node_modules/.bin/typeorm entity:create -n",
+		"migrate:generate": "./node_modules/.bin/ts-node ./node_modules/.bin/typeorm migration:generate -o -n"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jithinlal/backend-todo.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/jithinlal/backend-todo/issues"
+	},
+	"homepage": "https://github.com/jithinlal/backend-todo#readme",
+	"dependencies": {
+		"axios": "^0.25.0",
+		"cors": "^2.8.5",
+		"dotenv-safe": "^8.2.0",
+		"express": "^4.17.1",
+		"http-errors": "^2.0.0",
+		"pg": "^8.5.1",
+		"reflect-metadata": "^0.1.13",
+		"typeorm": "^0.2.31"
+	},
+	"devDependencies": {
+		"@types/axios": "^0.14.0",
+		"@types/cors": "^2.8.10",
+		"@types/express": "^4.17.11",
+		"@types/http-errors": "^1.8.2",
+		"@types/node": "^14.14.31",
+		"nodemon": "^2.0.7",
+		"ts-node": "^9.1.1",
+		"typescript": "^4.1.5"
+	}
+}
